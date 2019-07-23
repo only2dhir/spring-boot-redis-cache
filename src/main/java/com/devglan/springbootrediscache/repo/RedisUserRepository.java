@@ -38,4 +38,8 @@ public class RedisUserRepository {
         hashOperations.delete("USER", id);
     }
 
+    public void multiGetUsers(List<String> userIds){
+        hashOperations.multiGet("USER", userIds);
+    }
+
 }
